@@ -38,7 +38,7 @@ if st.button("Calcular Resultados", type="primary"):
 
     # 2. Cálculo da TMB (Harris-Benedict)
     if genero == "Masculino":
-        tmb = 66.5 + (13.75 * peso) + (5.0 * altura_cm) - (6.75 * idade)
+        tmb = 66.5 + (13.75 * peso) + (5.0 * altura_cm) - (6.77 * idade)
     else:
         tmb = 655.1 + (9.56 * peso) + (1.85 * altura_cm) - (4.68 * idade)
 
@@ -53,4 +53,5 @@ if st.button("Calcular Resultados", type="primary"):
     with res_col2:
         st.metric(label="Taxa Metabólica Basal (TMB)", value=f"{tmb:.0f} kcal")
         
+
     st.success("Cálculos realizados com sucesso!")
