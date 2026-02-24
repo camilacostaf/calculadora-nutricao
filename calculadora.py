@@ -49,7 +49,7 @@ if st.button("Calcular Resultados", type="primary"):
     else:
         tmb = 655.1 + (9.56 * peso) + (1.85 * altura_cm) - (4.68 * idade)
 
-    # 3. Cálculo do Gasto Energético Total (GET)
+    # 3. Cálculo do Gasto Energético Base (GEB)
     fatores_naf = {
         "Sedentário (1,2)": 1.2,
         "Pouca (1,375)": 1.375,
@@ -78,3 +78,4 @@ if st.button("Calcular Resultados", type="primary"):
         st.metric(label="Gasto Energético Total", value=f"{get:.0f} kcal", delta="TMB x NAF", delta_color="off")
         
     st.success("Cálculos realizados com sucesso!")
+
